@@ -1,6 +1,9 @@
-window.onload = function() {
+window.addEventListener("load", function() {
 	let form = document.querySelector("form");
-	form.onsubmit = function(event) {
+	let resetBtn = document.querySelector("button#reset");
+	let story = document.querySelector("div#story");
+
+	form.addEventListener("submit", function(event) {
 
 		const person1Input = document.getElementById("person1Input").value;
 		const person2Input = document.getElementById("person2Input").value;
@@ -19,8 +22,8 @@ window.onload = function() {
 		document.querySelector("span#noun").innerText = nounInput;
 		document.querySelector("span#exclamation").innerText = exclamationInput;
 
-		document.querySelector("div#story").removeAttribute("class");
+		story.removeAttribute("class");
 
 		event.preventDefault();
-	};
-};
+	});
+});
