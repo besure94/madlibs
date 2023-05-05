@@ -1,3 +1,8 @@
+function advertisement() {
+	window.alert("Do you need a new computer? Visit www.superextracomputersales.com to find the best deals!");
+	document.querySelector("form").removeEventListener("submit", advertisement);
+}
+
 window.addEventListener("load", function() {
 	let form = document.querySelector("form");
 	let resetBtn = document.getElementById("reset");
